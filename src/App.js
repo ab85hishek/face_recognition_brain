@@ -84,7 +84,7 @@ displayFaceBox = (box) => {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:4000/imageurl' ,{
+    fetch('https://fathomless-castle-77851.herokuapp.com/imageurl' ,{
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -94,7 +94,7 @@ displayFaceBox = (box) => {
       .then(response => response.json())
       .then(response=> {
         if(response){
-          fetch('http://localhost:4000/image' ,{
+          fetch('https://fathomless-castle-77851.herokuapp.com/image' ,{
            method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
